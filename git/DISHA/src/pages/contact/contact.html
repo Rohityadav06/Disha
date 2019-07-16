@@ -1,0 +1,100 @@
+
+<ion-header>
+  <ion-row style="background: yellow;
+  color: black;
+  height:50px;">
+
+    <ion-title> DISHA</ion-title>
+
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <div class="container" style="font-family: cursive; font-size:2.5rem">
+  <ion-grid>
+ 
+  <ion-row>
+    <ion-card>
+      <ion-card-header style="background: yellow;
+      color: black">
+        <label>Your Location</label>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+        <label>LATITUDE:{{lat}}</label>
+        <br>
+        <label>LONGITUDE:{{lng}}</label>
+      
+      </ion-item></ion-card-content>
+    </ion-card>
+  </ion-row>
+  <ion-row style="font-size: 2.5rem;
+  
+  
+  "> 
+    <ion-card>
+      <ion-card-header style="background: yellow">
+    <label>
+      SELECT YOUR BUS NUMBER:
+    </label>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+    <div class="form-group">
+      
+      <select class="form-control" id="BusNumberSelect" 
+      style="font-size: inherit;
+      
+      color: black;
+      border: yellow;
+      border-radius: 31.5rem;
+      background: gainsboro;" [(ngModel)]="busNumberSelect" required>
+        <option value="1"> 1</option>
+        <option value="2">2</option>
+        <option value="3" >3</option>
+        <option value="4">4</option>
+      </select>
+    
+
+    </div>
+  </ion-item>
+  </ion-card-content>
+</ion-card>
+  </ion-row>
+        <ion-row>
+          <ion-card class="shadow">
+            <ion-card-header style="    background: yellow;">
+              <label>CLICK HERE FOR START SENDING LOCATION</label>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-col >
+              <button ion-button clear large full id="BusNumberSelect" style="    BACKGROUND: BLACK;
+              COLOR: YELLOW;
+              border-radius: 2.5rem;"
+              (click)="onClickStart(busNumberSelect)"
+            
+            >START</button>
+          </ion-col>
+          <ion-col >
+              
+                  <button ion-button clear large full 
+                  style="BACKGROUND: BLACK;
+                  COLOR: YELLOW;
+                  border-radius: 2.5rem;"
+                  (click)="onClickStop()"
+                  
+                
+                >STOP</button>
+          </ion-col>
+            </ion-item>
+            <ion-item>
+              <label> * current status:{{currentStatus}}</label>
+            </ion-item>
+
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+  </ion-grid>
+</div>
+</ion-content>

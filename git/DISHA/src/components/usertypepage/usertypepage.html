@@ -1,0 +1,42 @@
+<ion-row>
+  <ion-header>
+    <ion-row style="background: yellow;
+  color: black;
+  height:50px;">
+
+      <ion-title> DISHA</ion-title>
+
+    </ion-row>
+  </ion-header>
+</ion-row>
+<ion-content>
+  <ion-grid class="container" style="background:white;">
+    <ion-row style="    margin-top: 50%">
+      <ion-row style="    margin-left: initial;">
+        <label style="    font-size: 2.5rem;
+    font-family: cursive;
+    background: yellow;">CONTINUE AS....</label>
+      </ion-row>
+      <ion-card>
+        <ion-item>
+          <button ion-button style="    background: black;
+  color: yellow;" full large (click)="onClickBusDriver()">BUS DRIVER</button>
+        </ion-item>
+
+      </ion-card>
+    </ion-row>
+    <label style="    text-align: center;
+    font-size: x-large;
+">OR</label>
+    <ion-row>
+      <ion-card>
+        <ion-item>
+          <button ion-button full large class="round" style="    background: black;
+      color: yellow;" (click)="onClickPassenger()">PASSENGER </button>
+
+        </ion-item>
+      </ion-card>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

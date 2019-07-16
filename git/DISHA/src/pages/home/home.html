@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-row style="background: yellow;
+  color: black;
+  height:50px;">
+
+    <ion-title> DISHA</ion-title>
+
+  </ion-row>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+<ion-card class="adv-map">
+  <div style="position: relative">
+    <img src="assets/imgs/clgbus.jpg">
+    <ion-fab right top>
+      <button ion-fab class="fab-map">
+        <ion-icon name='pin'></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+  <ion-item>
+    <ion-icon color="subtle" large item-start name='information-circle'></ion-icon>
+    <h2>Search your Bus</h2>
+   </ion-item>
+  <ion-item>
+    <ion-icon color="subtle" large item-start name='leaf'></ion-icon>
+  
+    <div class="form-group">
+        <label >Select Bus Number</label>
+        <select class="form-control" id="busNumber" [(ngModel)]="userBusNumber">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+    
+    </ion-item>
+  <ion-item actions>
+    
+    <button ion-button color="primary" clear item-end icon-start full 
+    style="    background: yellow;
+    color: black;"  
+    (click)="searchLocationOfBus(userBusNumber)" >
+      <ion-icon name='search'></ion-icon>
+      SEARCH
+    </button>
+  </ion-item>
+
+</ion-card>
+
+
+
+</ion-content>
